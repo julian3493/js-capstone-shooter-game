@@ -1,7 +1,10 @@
 import Phaser from 'phaser'
 import logo from '../assets/logo.png';
-import ScrollingBackground from '../Entities/scrollingBackground.js'
-import Player from '../Entities/player.js'
+import ScrollingBackground from '../Entities/scrollingBackground.js';
+import Player from '../Entities/player.js';
+import GunShip from '../Entities/gunShip.js';
+import ChaserShip from '../Entities/chaserShip.js';
+import CarrierShip from '../Entities/carrierShip.js';
  
 export default class GameScene extends Phaser.Scene {
   constructor () {
@@ -49,11 +52,11 @@ export default class GameScene extends Phaser.Scene {
       laser: this.sound.add("sndLaser")
     };
 
-    // this.backgrounds = [];
-    // for (var i = 0; i < 5; i++) { // create five scrolling backgrounds
-    //   var bg = this.add.existing(new ScrollingBackground(this, "sprBg0", i * 10));
-    //   this.backgrounds.push(bg);
-    // }
+    this.backgrounds = [];
+    for (var i = 0; i < 5; i++) { // create five scrolling backgrounds
+      var bg = this.add.existing(new ScrollingBackground(this, "sprBg0", i * 10));
+      this.backgrounds.push(bg);
+    }
 
     this.player = this.add.existing(new Player(
       this,

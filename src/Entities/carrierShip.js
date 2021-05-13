@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import Entity from './Entities.js';
+import Entity from './entity.js';
 
 export default class CarrierShip extends Entity {
   constructor(scene, x, y) {
