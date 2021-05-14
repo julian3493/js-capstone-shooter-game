@@ -17,32 +17,18 @@ export default class GameScene extends Phaser.Scene {
  
   create() {
     this.anims.create({
-      key: "sprEnemy0",
-      frames: this.anims.generateFrameNumbers("sprEnemy0"),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
-      key: "sprEnemy2",
-      frames: this.anims.generateFrameNumbers("sprEnemy2"),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
       key: "sprExplosion",
       frames: this.anims.generateFrameNumbers("sprExplosion"),
       frameRate: 20,
       repeat: 0
     });
 
-    this.anims.create({
-      key: "sprPlayer",
-      frames: this.anims.generateFrameNumbers("sprPlayer"),
-      frameRate: 20,
-      repeat: -1
-    });
+    // this.anims.create({
+    //   key: "sprPlayer",
+    //   frames: this.anims.generateFrameNumbers("sprPlayer"),
+    //   frameRate: 20,
+    //   repeat: -1
+    // });
 
     this.sfx = {
       explosions: [
@@ -53,7 +39,7 @@ export default class GameScene extends Phaser.Scene {
     };
 
     this.backgrounds = [];
-    for (var i = 0; i < 5; i++) { // create five scrolling backgrounds
+    for (var i = 0; i < 5; i++) {
       var bg = this.add.existing(new ScrollingBackground(this, "sprBg0", i * 10));
       this.backgrounds.push(bg);
     }
@@ -64,6 +50,7 @@ export default class GameScene extends Phaser.Scene {
       this.game.config.height * 0.5,
       "sprPlayer"
     ));
+    this.player.setScale(0.2);
 
     this.player.update();
 
@@ -87,6 +74,7 @@ export default class GameScene extends Phaser.Scene {
             Phaser.Math.Between(0, this.game.config.width),
             0
           );
+          enemy.setScale(Phaser.Math.Between(4, 5) * 0.1);
         }
         else if (Phaser.Math.Between(0, 10) >= 5) {
           if (this.getEnemiesByType("ChaserShip").length < 5) {
@@ -104,10 +92,11 @@ export default class GameScene extends Phaser.Scene {
             Phaser.Math.Between(0, this.game.config.width),
             0
           );
+          enemy.setScale(Phaser.Math.Between(5, 10) * 0.1);
         }
 
         if (enemy !== null) {
-          enemy.setScale(Phaser.Math.Between(10, 20) * 0.1);
+          // enemy.setScale(Phaser.Math.Between(10, 20) * 0.1);
           this.enemies.add(enemy);
         }
       },
