@@ -1,22 +1,23 @@
 import 'phaser';
+import config from '../Config/config';
 import btn1 from '../assets/blue_button02.png';
 import btn2 from '../assets/blue_button03.png';
 import logo from '../assets/logo.png';
 import box from '../assets/grey_box.png';
 import blueBox from '../assets/blue_boxCheckmark.png';
 import music from '../assets/TownTheme.mp3';
-import sprBg0 from '../content/sprBg0.png';
-import sprBg1 from '../content/sprBg1.png';
-import sprExplosion from '../content/sprExplosion.png';
-import sprEnemy0 from '../content/sprEnemy0.png';
-import sprEnemy1 from '../content/sprEnemy1.png';
-import sprEnemy2 from '../content/sprEnemy2.png';
-import sprLaserEnemy0 from '../content/sprLaserEnemy0.png';
-import sprLaserPlayer from '../content/sprLaserPlayer.png';
-import sprPlayer from '../content/sprPlayer.png';
-import sndExplode0 from '../content/sndExplode0.wav';
-import sndExplode1 from '../content/sndExplode1.wav';
-import sndLaser from '../content/sndLaser.wav';
+import sprBg0 from '../assets/sprBg0.png';
+import sprBg1 from '../assets/sprBg1.png';
+import sprExplosion from '../assets/sprExplosion.png';
+import sprEnemy0 from '../assets/sprEnemy0.png';
+import sprEnemy1 from '../assets/sprEnemy1.png';
+import sprEnemy2 from '../assets/sprEnemy2.png';
+import sprLaserEnemy0 from '../assets/sprLaserEnemy0.png';
+import sprLaserPlayer from '../assets/sprLaserPlayer.png';
+import sprPlayer from '../assets/sprPlayer.png';
+import sndExplode0 from '../assets/sndExplode0.wav';
+import sndExplode1 from '../assets/sndExplode1.wav';
+import sndLaser from '../assets/sndLaser.wav';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor () {
@@ -25,13 +26,13 @@ export default class PreloaderScene extends Phaser.Scene {
  
   preload () {
     // add logo image
-    this.add.image(400, 300, 'logo');
+    this.add.image(config.width/2, config.height/2, 'logo');
   
     // display progress bar
     var progressBar = this.add.graphics();
     var progressBox = this.add.graphics();
     progressBox.fillStyle(0x222222, 0.8);
-    progressBox.fillRect(240, 270, 320, 50);
+    progressBox.fillRect(140, 270, 320, 50);
   
     var width = this.cameras.main.width;
     var height = this.cameras.main.height;
