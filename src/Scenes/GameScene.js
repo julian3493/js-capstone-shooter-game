@@ -5,7 +5,10 @@ import Player from '../Entities/player.js';
 import GunShip from '../Entities/gunShip.js';
 import ChaserShip from '../Entities/chaserShip.js';
 import CarrierShip from '../Entities/carrierShip.js';
- 
+
+var score = 0;
+var scoreText;
+
 export default class GameScene extends Phaser.Scene {
   constructor () {
     super('Game');
@@ -16,19 +19,15 @@ export default class GameScene extends Phaser.Scene {
   }
  
   create() {
+
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#ccc' });
+
     this.anims.create({
       key: "sprExplosion",
       frames: this.anims.generateFrameNumbers("sprExplosion"),
       frameRate: 20,
       repeat: 0
     });
-
-    // this.anims.create({
-    //   key: "sprPlayer",
-    //   frames: this.anims.generateFrameNumbers("sprPlayer"),
-    //   frameRate: 20,
-    //   repeat: -1
-    // });
 
     this.sfx = {
       explosions: [
@@ -96,7 +95,6 @@ export default class GameScene extends Phaser.Scene {
         }
 
         if (enemy !== null) {
-          // enemy.setScale(Phaser.Math.Between(10, 20) * 0.1);
           this.enemies.add(enemy);
         }
       },
@@ -180,6 +178,8 @@ export default class GameScene extends Phaser.Scene {
 
     this.physics.add.collider(this.playerLasers, this.enemies, function(playerLaser, enemy) {
       if (enemy) {
+        score += enemy.score;
+        scoreText.setText('Score: ' + score);
         if (enemy.onDestroy !== undefined) {
           enemy.onDestroy();
         }
