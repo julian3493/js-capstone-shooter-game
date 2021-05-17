@@ -18,6 +18,11 @@ import sprPlayer from '../assets/sprPlayer.png';
 import sndExplode0 from '../assets/sndExplode0.wav';
 import sndExplode1 from '../assets/sndExplode1.wav';
 import sndLaser from '../assets/sndLaser.wav';
+import sndBtnOver from '../assets/sndBtnOver.wav';
+import sndBtnDown from '../assets/sndBtnDown.wav';
+import sprBtnRestart from '../assets/sprBtnRestart.png';
+import sprBtnRestartHover from '../assets/sprBtnRestartHover.png';
+import sprBtnRestartDown from '../assets/sprBtnRestartDown.png';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor () {
@@ -132,6 +137,13 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.audio("sndExplode0", sndExplode0);
     this.load.audio("sndExplode1", sndExplode1);
     this.load.audio("sndLaser", sndLaser);
+
+    // gameOver assets
+    this.load.audio("sndBtnOver", sndBtnOver);
+    this.load.audio("sndBtnDown", sndBtnDown);
+    this.load.image("sprBtnRestart", sprBtnRestart);
+    this.load.image("sprBtnRestartHover", sprBtnRestartHover);
+    this.load.image("sprBtnRestartDown", sprBtnRestartDown);
   }
  
   create () {
