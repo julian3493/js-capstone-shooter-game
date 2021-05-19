@@ -5,9 +5,10 @@ import Player from '../Entities/player.js';
 import GunShip from '../Entities/gunShip.js';
 import ChaserShip from '../Entities/chaserShip.js';
 import CarrierShip from '../Entities/carrierShip.js';
+import { saveLocalScore, getLocalScore } from '../Config/localStorage';
 
-var score = 0;
-var scoreText;
+let score;
+let scoreText;
 
 export default class GameScene extends Phaser.Scene {
   constructor () {
@@ -19,7 +20,7 @@ export default class GameScene extends Phaser.Scene {
   }
  
   create() {
-
+    score = 0;
     scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#ccc' });
 
     this.anims.create({
@@ -179,6 +180,7 @@ export default class GameScene extends Phaser.Scene {
     this.physics.add.collider(this.playerLasers, this.enemies, function(playerLaser, enemy) {
       if (enemy) {
         score += enemy.score;
+        saveLocalScore(score);
         scoreText.setText('Score: ' + score);
         if (enemy.onDestroy !== undefined) {
           enemy.onDestroy();

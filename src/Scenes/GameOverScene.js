@@ -1,5 +1,6 @@
 import 'phaser';
 import ScrollingBackground from '../Entities/scrollingBackground';
+import { resetLocalScore } from '../Config/localStorage';
 
 export default class GameOverScene extends Phaser.Scene {
   constructor() {
@@ -44,6 +45,7 @@ export default class GameOverScene extends Phaser.Scene {
 
     this.btnRestart.on("pointerup", function() {
       this.btnRestart.setTexture("sprBtnRestart");
+      resetLocalScore();
       this.scene.start("Game");
     }, this);
 
