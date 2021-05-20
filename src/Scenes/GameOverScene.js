@@ -1,6 +1,7 @@
 import 'phaser';
 import ScrollingBackground from '../Entities/scrollingBackground';
-import { resetLocalScore } from '../Config/localStorage';
+import { resetLocalScore, getLocalScore } from '../Config/localStorage';
+import { postScore, getScores } from '../Config/scoresAPI';
 
 export default class GameOverScene extends Phaser.Scene {
   constructor() {
@@ -16,6 +17,8 @@ export default class GameOverScene extends Phaser.Scene {
       align: 'center'
     })
     this.title.setOrigin(0.5);
+
+    console.log(getScores);
 
     this.sfx = {
       btnOver: this.sound.add("sndBtnOver"),

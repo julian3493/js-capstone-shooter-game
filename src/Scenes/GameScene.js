@@ -5,7 +5,7 @@ import Player from '../Entities/player.js';
 import GunShip from '../Entities/gunShip.js';
 import ChaserShip from '../Entities/chaserShip.js';
 import CarrierShip from '../Entities/carrierShip.js';
-import { saveLocalScore, getLocalScore } from '../Config/localStorage';
+import { saveLocalScore } from '../Config/localStorage';
 
 let score;
 let scoreText;
