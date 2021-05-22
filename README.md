@@ -10,7 +10,7 @@ This is a shooter game created with phaser 3, in this game you must destroy enem
 
 ## Live Demo
 
-<a href="https://rawcdn.githack.com/julian3493/js-capstone-shooter-game/55341fc5591a56dc0147704d3632b8a280e9545e/dist/index.html" target="_blank">Live version</a>
+<a href="https://rawcdn.githack.com/julian3493/js-capstone-shooter-game/602815df1ca38caa7653f35e57aea50673859627/dist/index.html" target="_blank">Live version</a>
 
 ## Getting Started
 
