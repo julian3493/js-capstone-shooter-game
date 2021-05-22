@@ -1,6 +1,7 @@
-import 'phaser';
+import Phaser from 'phaser';
 import { resetLocalScore, getLocalScore } from '../Config/localStorage';
 import config from '../Config/config';
+import { postScore } from '../Config/scoresAPI';
 import Button from '../Objects/Button';
 
 export default class GameOverScene extends Phaser.Scene {
