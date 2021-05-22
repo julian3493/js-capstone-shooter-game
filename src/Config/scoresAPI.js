@@ -8,6 +8,7 @@ const postScore = async (player, score) => {
   try {
     const request = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/FQyLd3szps7WIlySAb52/scores/', {
       method: 'POST',
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json'
       },

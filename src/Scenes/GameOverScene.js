@@ -1,7 +1,7 @@
 import 'phaser';
 import { resetLocalScore, getLocalScore } from '../Config/localStorage';
-import { postScore } from '../Config/scoresAPI';
 import config from '../Config/config';
+import Button from '../Objects/Button';
 
 export default class GameOverScene extends Phaser.Scene {
   constructor() {
@@ -28,7 +28,7 @@ export default class GameOverScene extends Phaser.Scene {
       e.preventDefault();
       this.player = textInput.value;
       if (this.player) {
-        // postScore(this.player, score);
+        postScore(this.player, score);
         this.scene.start("Highscore");
       }
     });
@@ -54,5 +54,7 @@ export default class GameOverScene extends Phaser.Scene {
     const form = this.createForm(playerScore);
     const element = this.add.dom(this.game.config.width * 0.5, -200, form);
     element.setDepth(3);
+
+    this.playAgainButton = new Button(this, config.width/2, config.height - 50, 'blueButton1', 'blueButton2', 'Play Again', 'Game');
   }
 }

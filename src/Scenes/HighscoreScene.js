@@ -1,8 +1,8 @@
 import 'phaser';
-import ScrollingBackground from '../Entities/scrollingBackground';
-import { resetLocalScore, getLocalScore } from '../Config/localStorage';
-import { postScore, getScores } from '../Config/scoresAPI';
+import { getScores } from '../Config/scoresAPI';
 import config from '../Config/config';
+import Button from '../Objects/Button';
+
 
 export default class GameOverScene extends Phaser.Scene {
   constructor() {
@@ -21,10 +21,10 @@ export default class GameOverScene extends Phaser.Scene {
 
     getScores().then(response => {
       response.sort((a, b) => b[1] - a[1])
-        .slice(0, 6)
+        .slice(0, 5)
         .map((game, i) => {
           const text = `${i + 1}. ${game[0]} --- ${game[1]}`;
-          this.add.text(config.width / 2, 200 + i*50, text, {
+          this.add.text(config.width / 2, 200 + i*30, text, {
             fontFamily: 'monospace',
             fontSize: '20px',
             color: '#31A2F2',
@@ -34,5 +34,7 @@ export default class GameOverScene extends Phaser.Scene {
           return text;
         });
     });
+
+    this.playAgainButton = new Button(this, config.width/2, config.height - 50, 'blueButton1', 'blueButton2', 'Play Again', 'Game');
   }
 }
