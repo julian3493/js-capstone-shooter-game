@@ -1,4 +1,4 @@
-import Entity from './entity.js';
+import Entity from './entity';
 
 export default class PlayerLaser extends Entity {
   constructor(scene, x, y) {

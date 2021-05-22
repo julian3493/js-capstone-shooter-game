@@ -1,4 +1,4 @@
-import 'phaser';
+import Phaser from 'phaser';
 import config from '../Config/config';
 import btn1 from '../assets/blue_button02.png';
 import btn2 from '../assets/blue_button03.png';

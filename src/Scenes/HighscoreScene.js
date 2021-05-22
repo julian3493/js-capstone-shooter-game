@@ -1,4 +1,4 @@
-import 'phaser';
+import Phaser from 'phaser';
 import { getScores } from '../Config/scoresAPI';
 import config from '../Config/config';
 import Button from '../Objects/Button';

@@ -11,7 +11,7 @@ export default class ScrollingBackground {
 
   createLayers() {
     const flipAxis = Phaser.Math.Between(0, 10) >= 5 ? -1 : 1;
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 2; i+=1) {
       const layer = this.scene.add.sprite(0, 0, this.key);
       layer.y = (layer.displayHeight * i);
       const flipX = flipAxis;
@@ -27,7 +27,7 @@ export default class ScrollingBackground {
 
   update() {
     if (this.layers.getChildren()[0].y > 0) {
-      for (let i = 0; i < this.layers.getChildren().length; i++) {
+      for (let i = 0; i < this.layers.getChildren().length; i+=1) {
         const layer = this.layers.getChildren()[i];
         layer.y = (-layer.displayHeight) + (layer.displayHeight * i);
       }
