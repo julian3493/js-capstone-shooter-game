@@ -76,7 +76,7 @@ export default class PreloaderScene extends Phaser.Scene {
 
     // update progress bar
     this.load.on('progress', (value) => {
-      percentText.setText(`${parseInt(value * 100)}%`);
+      percentText.setText(`${parseInt(value * 100, 10)}%`);
       progressBar.clear();
       progressBar.fillStyle(0xffffff, 1);
       progressBar.fillRect(90, 300, 300 * value, 30);
@@ -146,15 +146,12 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('sprBtnRestartDown', sprBtnRestartDown);
   }
 
-  create() {
-  }
-
   init() {
     this.readyCount = 0;
   }
 
   ready() {
-    this.readyCount++;
+    this.readyCount += 1;
     if (this.readyCount === 2) {
       this.scene.start('Title');
     }
