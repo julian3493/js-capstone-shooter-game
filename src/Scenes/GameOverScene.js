@@ -48,16 +48,14 @@ export default class GameOverScene extends Phaser.Scene {
     this.title.setOrigin(0.5);
 
     const playerScore = getLocalScore();
-    resetLocalScore();
 
-    /* eslint-disable */
     this.message = this.add.text(config.width * 0.375, 200, `Your Score: ${playerScore}`);
-    /* eslint-enable */
 
     const form = this.createForm(playerScore);
     const element = this.add.dom(this.game.config.width * 0.5, -200, form);
     element.setDepth(3);
 
     this.playAgainButton = new Button(this, config.width / 2, config.height - 50, 'blueButton1', 'blueButton2', 'Play Again', 'Game');
+    resetLocalScore();
   }
 }
