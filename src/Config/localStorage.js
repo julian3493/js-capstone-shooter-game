@@ -6,7 +6,7 @@ const getLocalScore = () => {
   let score = JSON.parse(localStorage.getItem('score'));
   if (score === null) {
     score = 0;
-    saveLocalScore('score', score);
+    saveLocalScore(score);
   }
   return score;
 };

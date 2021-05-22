@@ -49,8 +49,14 @@ export default class GameOverScene extends Phaser.Scene {
 
     const playerScore = getLocalScore();
 
-    this.message = this.add.text(config.width * 0.375, 200, `Your Score: ${playerScore}`);
-
+    this.message = this.add.text(config.width * 0.375, 200, `Your Score: ${playerScore}`, {
+      fontFamily: 'monospace',
+      fontSize: 48,
+      fontStyle: 'bold',
+      color: '#ffffff',
+      align: 'center',
+    });
+    
     const form = this.createForm(playerScore);
     const element = this.add.dom(this.game.config.width * 0.5, -200, form);
     element.setDepth(3);
