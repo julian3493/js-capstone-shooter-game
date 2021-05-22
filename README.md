@@ -1,52 +1,67 @@
-# Phaser 3 Webpack Project Template
+# Space Shooter Game
 
-A Phaser 3 project template with ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/) that includes hot-reloading for development and production-ready builds.
+This is a shooter game created with phaser 3, in this game you must destroy enemy spaceships to get points there are 3 diferent types of enemies which will do diferent actions and will give you an specific amount of points.
 
-This has been updated for Phaser 3.50.0 version and above.
+## Built With
 
-Loading images via JavaScript module `import` is also supported, although not recommended.
+- Phaser 3
+- Webpack
+- Javascript
 
-## Requirements
+## Live Demo
 
-[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
+<a href="https://rawcdn.githack.com/julian3493/js-capstone-shooter-game/55341fc5591a56dc0147704d3632b8a280e9545e/dist/index.html" target="_blank">Live version</a>
 
-## Available Commands
+## Getting Started
 
-| Command | Description |
-|---------|-------------|
-| `npm install` | Install project dependencies |
-| `npm start` | Build project and open web server running project |
-| `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
+To get a local copy up and running follow these simple example steps.
 
-## Writing Code
+### Setup
 
-After cloning the repo, run `npm install` from your project directory. Then, you can start the local development server by running `npm start`.
+- Clone this repository. Type `git clone https://github.com/julian3493/weather-app.git`
+- Navigate to the project folder (weather-app) `cd weather-app`
 
-After starting the development server with `npm start`, you can edit any files in the `src` folder and webpack will automatically recompile and reload your server (available at `http://localhost:8080` by default).
+### Run Game Locally
+- Type `npm run start` in the console
 
-## Customizing the Template
+## Game Controls
+|Command | Action |
+|Left Arrow| To move left |
+|Right Arrow| To move right |
+|Up Arrow| To move up |
+|Down Arrow| To move left |
+|Space | Shoot laser |
 
-### Babel
+## Enemies info
 
-You can write modern ES6+ JavaScript and Babel will transpile it to a version of JavaScript that you want your project to support. The targeted browsers are set in the `.babelrc` file and the default currently targets all browsers with total usage over "0.25%" but excludes IE11 and Opera Mini.
+|Space Ship                                      |Description                            |Points                |
+|-------------------------------------------|---------------------------------------|--------------------|
+|![Cruise Spaceship](./src/assets/sprEnemy0.png)   |It is the biggest and the easiest to avoid |10             |
+|![Gunner Spaceship](./src/assets/sprLaserEnemy0.png) |This spaceship shoots direct to the bottom of the screen | 30|
+|![Chaser Spaceship](./src/assets/sprEnemy2.png)  |A little and rounded object that will follow you  | 50 |
 
- ```
-"browsers": [
-  ">0.25%",
-  "not ie 11",
-  "not op_mini all"
-]
- ```
+## Author
+​
+👤 **Julian Ramos**
+​
 
-### Webpack
+[<code><img height="26" src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png"></code>](https://github.com/julian3493)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/sco/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png"></code>](https://twitter.com/JulianR16893833)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png"></code>](https://www.linkedin.com/in/julian-ramos-arevalo/)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Gmail_Icon.svg"></code>](mailto:julianramosarevalo@gmail.com)
 
-If you want to customize your build, such as adding a new webpack loader or plugin (i.e. for loading CSS or fonts), you can modify the `webpack/base.js` file for cross-project changes, or you can modify and/or create new configuration files and target them in specific npm tasks inside of `package.json'.
+## 🤝 Contributing
 
-## Deploying Code
+Contributions, issues and feature requests are welcome!
 
-After you run the `npm run build` command, your code will be built into a single bundle located at `dist/bundle.min.js` along with any other assets you project depended. 
+Feel free to check the <a href="https://github.com/julian3493/js-capstone-shooter-game/issues"> issues page</a>.
 
-If you put the contents of the `dist` folder in a publicly-accessible location (say something like `http://mycoolserver.com`), you should be able to open `http://mycoolserver.com/index.html` and play your game.
+## Show your support
 
+Give a ⭐️ if you like this project!
 
-Live Demo : https://rawcdn.githack.com/julian3493/js-capstone-shooter-game/55341fc5591a56dc0147704d3632b8a280e9545e/dist/index.html
+## Acknowledgments
+
+- <a href="https://learn.yorkcs.com/category/tutorials/gamedev/phaser-3/build-a-space-shooter-with-phaser-3/" target="_blank">York Computer Solutions</a>
+- <a href="https://www.stackoverflow.com/" target="_blank">Stackoverflow</a>
+- <a href='http://carlosalface.blogspot.pt/'>Carlos Alface</a>
