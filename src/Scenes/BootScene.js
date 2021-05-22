@@ -1,16 +1,16 @@
 import 'phaser';
-import logo from '../assets/sylvanas.jpg'
- 
+import logo from '../assets/sylvanas.jpg';
+
 export default class BootScene extends Phaser.Scene {
-  constructor () {
+  constructor() {
     super('Boot');
   }
- 
-  preload () {
+
+  preload() {
     this.load.image('logo', logo);
   }
- 
-  create () {
+
+  create() {
     this.scene.start('Preloader');
   }
-};
+}

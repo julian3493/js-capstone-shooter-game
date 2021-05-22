@@ -10,9 +10,9 @@ const postScore = async (player, score) => {
       method: 'POST',
       mode: 'cors',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ user: player, score: score }),
+      body: JSON.stringify({ user: player, score }),
     });
     const response = await request.json();
     return response;
@@ -41,6 +41,5 @@ const getScores = async () => {
     throw new Error('Unable to find Highscores!');
   }
 };
-
 
 export { getScores, postScore };

@@ -5,7 +5,7 @@ import Button from '../Objects/Button';
 
 export default class GameOverScene extends Phaser.Scene {
   constructor() {
-    super("GameOver");
+    super('GameOver');
   }
 
   createForm(score) {
@@ -29,7 +29,7 @@ export default class GameOverScene extends Phaser.Scene {
       this.player = textInput.value;
       if (this.player) {
         postScore(this.player, score);
-        this.scene.start("Highscore");
+        this.scene.start('Highscore');
       }
     });
     bodyTag.append(form);
@@ -37,24 +37,24 @@ export default class GameOverScene extends Phaser.Scene {
   }
 
   create() {
-    this.title = this.add.text(config.width * 0.5, 128, "GAME OVER", {
+    this.title = this.add.text(config.width * 0.5, 128, 'GAME OVER', {
       fontFamily: 'monospace',
       fontSize: 48,
       fontStyle: 'bold',
       color: '#ffffff',
-      align: 'center'
-    })
+      align: 'center',
+    });
     this.title.setOrigin(0.5);
 
-    let playerScore = getLocalScore();
+    const playerScore = getLocalScore();
     resetLocalScore();
 
-    this.message = this.add.text(config.width*0.375, 200, `Your Score: ${playerScore}`);
+    this.message = this.add.text(config.width * 0.375, 200, `Your Score: ${playerScore}`);
 
     const form = this.createForm(playerScore);
     const element = this.add.dom(this.game.config.width * 0.5, -200, form);
     element.setDepth(3);
 
-    this.playAgainButton = new Button(this, config.width/2, config.height - 50, 'blueButton1', 'blueButton2', 'Play Again', 'Game');
+    this.playAgainButton = new Button(this, config.width / 2, config.height - 50, 'blueButton1', 'blueButton2', 'Play Again', 'Game');
   }
 }

@@ -36,9 +36,9 @@ To get a local copy up and running follow these simple example steps.
 
 |Space Ship                                      |Description                            |Points                |
 |-------------------------------------------|---------------------------------------|--------------------|
-|![Cruise Spaceship](./src/assets/sprEnemy0.png)   |It is the biggest and the easiest to avoid |10             |
-|![Gunner Spaceship](./src/assets/sprLaserEnemy0.png) |This spaceship shoots direct to the bottom of the screen | 30|
-|![Chaser Spaceship](./src/assets/sprEnemy2.png)  |A little and rounded object that will follow you  | 50 |
+|![Cruise Spaceship](./src/assets/sprEnemy2.png)   |It is the biggest and the easiest to avoid |10             |
+|![Gunner Spaceship](./src/assets/sprEnemy0.png) |This spaceship shoots direct to the bottom of the screen | 30|
+|![Chaser Spaceship](./src/assets/sprEnemy1.png)  |A little and rounded object that will follow you  | 50 |
 
 ## Author
 ​
