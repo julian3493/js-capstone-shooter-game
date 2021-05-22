@@ -50,7 +50,9 @@ export default class GameOverScene extends Phaser.Scene {
     const playerScore = getLocalScore();
     resetLocalScore();
 
+    /* eslint-disable */
     this.message = this.add.text(config.width * 0.375, 200, `Your Score: ${playerScore}`);
+    /* eslint-enable */
 
     const form = this.createForm(playerScore);
     const element = this.add.dom(this.game.config.width * 0.5, -200, form);
