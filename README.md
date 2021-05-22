@@ -26,6 +26,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Game Controls
 |Command | Action |
+|-------|-------|
 |Left Arrow| To move left |
 |Right Arrow| To move right |
 |Up Arrow| To move up |
