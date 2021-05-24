@@ -34,6 +34,7 @@ export default class GameOverScene extends Phaser.Scene {
         });
     });
 
-    this.playAgainButton = new Button(this, config.width / 2, config.height - 50, 'blueButton1', 'blueButton2', 'Play Again', 'Game');
+    this.playAgainButton = new Button(this, config.width * 0.25, config.height - 50, 'blueButton1', 'blueButton2', 'Play Again', 'Game');
+    this.menuButton = new Button(this, config.width * 0.75, config.height - 50, 'blueButton1', 'blueButton2', 'Menu', 'Title');
   }
 }
