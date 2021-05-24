@@ -30,7 +30,7 @@ export default class GameOverScene extends Phaser.Scene {
       this.player = textInput.value;
       if (this.player) {
         postScore(this.player, score).then(setTimeout(() => {
-          console.log('posting score')
+          console.log('posting score');
         }, 3000));
         this.scene.start('Highscore');
       }
@@ -49,17 +49,17 @@ export default class GameOverScene extends Phaser.Scene {
     });
     this.title.setOrigin(0.5);
 
-    const playerScore = getLocalScore();
+    // let playerScore = getLocalScore();
 
-    this.message = this.add.text(config.width * 0.25, 200, `Your Score: ${playerScore}`, {
+    this.message = this.add.text(config.width * 0.25, 200, 'Your Score:', {
       fontFamily: 'monospace',
       fontSize: 30,
       fontStyle: 'bold',
       color: '#ffffff',
       align: 'center',
     });
-    
-    const form = this.createForm(playerScore);
+
+    const form = this.createForm(0);
     const element = this.add.dom(this.game.config.width * 0.5, -200, form);
     element.setDepth(3);
 
