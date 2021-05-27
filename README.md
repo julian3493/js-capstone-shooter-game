@@ -18,13 +18,24 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- Clone this repository. Type `git clone https://github.com/julian3493/weather-app.git`
-- Navigate to the project folder (weather-app) `cd weather-app`
+- Clone this repository. Type `git clone https://github.com/julian3493/js-capstone-shooter-game.git`
+- Navigate to the project folder (js-capstone-shooter-game) `cd js-capstone-shooter-game`
 
 ### Run Game Locally
 - Type `npm run start` in the console
 
-## Game Controls
+## Game Design
+
+### List of Scenes
+- Boot
+- Preloader
+- Title
+- Game
+- Options
+- Credits
+- Highscores
+
+### Game Controls
 |Command | Action |
 |-------|-------|
 |Left Arrow| To move left |
@@ -33,7 +44,7 @@ To get a local copy up and running follow these simple example steps.
 |Down Arrow| To move left |
 |Space | Shoot laser |
 
-## Enemies info
+### Enemies info
 
 |Space Ship                                      |Description                            |Points                |
 |-------------------------------------------|---------------------------------------|--------------------|
