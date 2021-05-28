@@ -24,6 +24,9 @@ To get a local copy up and running follow these simple example steps.
 ### Run Game Locally
 - Type `npm run start` in the console
 
+### Run Test
+- - Type `npm test` in the console
+
 ## Game Design
 
 ### List of Scenes
