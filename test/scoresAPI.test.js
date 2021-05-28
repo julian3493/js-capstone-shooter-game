@@ -1,4 +1,4 @@
-import { postScore, getScores } from '../Config/scoresAPI';
+import { postScore, getScores } from '../src/Config/scoresAPI';
 import 'regenerator-runtime';
 
 postScore.fetch = jest.fn(() => Promise.resolve({

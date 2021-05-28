@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1622220619587" clover="3.2.0">
+  <project timestamp="1622220619587" name="All files">
+    <metrics statements="38" coveredstatements="15" conditionals="8" coveredconditionals="0" methods="6" coveredmethods="3" elements="52" coveredelements="18" complexity="0" loc="38" ncloc="38" packages="2" files="2" classes="2"/>
+    <package name="Config">
+      <metrics statements="17" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="scoresAPI.js" path="C:\Users\julian\Documents\Microverse\JS\js-capstone-shooter-game\src\Config\scoresAPI.js">
+        <metrics statements="17" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="50" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="Entities">
+      <metrics statements="21" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="entity.js" path="C:\Users\julian\Documents\Microverse\JS\js-capstone-shooter-game\src\Entities\entity.js">
+        <metrics statements="21" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
