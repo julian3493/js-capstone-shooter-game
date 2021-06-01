@@ -1,11 +1,12 @@
-import 'phaser';
+import Phaser from 'phaser';
 import { resetLocalScore, getLocalScore } from '../Config/localStorage';
-import { postScore } from '../Config/scoresAPI';
 import config from '../Config/config';
+import { postScore } from '../Config/scoresAPI';
+import Button from '../Objects/Button';
 
 export default class GameOverScene extends Phaser.Scene {
   constructor() {
-    super("GameOver");
+    super('GameOver');
   }
 
   createForm(score) {
@@ -28,8 +29,10 @@ export default class GameOverScene extends Phaser.Scene {
       e.preventDefault();
       this.player = textInput.value;
       if (this.player) {
-        // postScore(this.player, score);
-        this.scene.start("Highscore");
+        postScore(this.player, score).then(setTimeout(() => {
+          console.log('posting score');
+        }, 3000));
+        this.scene.start('Highscore');
       }
     });
     bodyTag.append(form);
@@ -37,22 +40,31 @@ export default class GameOverScene extends Phaser.Scene {
   }
 
   create() {
-    this.title = this.add.text(config.width * 0.5, 128, "GAME OVER", {
+    this.title = this.add.text(config.width * 0.5, 128, 'GAME OVER', {
       fontFamily: 'monospace',
       fontSize: 48,
       fontStyle: 'bold',
       color: '#ffffff',
-      align: 'center'
-    })
+      align: 'center',
+    });
     this.title.setOrigin(0.5);
 
-    let playerScore = getLocalScore();
-    resetLocalScore();
+    const playerScore = getLocalScore();
 
-    this.message = this.add.text(config.width*0.375, 200, `Your Score: ${playerScore}`);
+    this.message = this.add.text(config.width * 0.25, 200, `Your Score: ${playerScore}`, {
+      fontFamily: 'monospace',
+      fontSize: 30,
+      fontStyle: 'bold',
+      color: '#ffffff',
+      align: 'center',
+    });
 
     const form = this.createForm(playerScore);
     const element = this.add.dom(this.game.config.width * 0.5, -200, form);
     element.setDepth(3);
+
+    this.playAgainButton = new Button(this, config.width * 0.25, config.height - 50, 'blueButton1', 'blueButton2', 'Play Again', 'Game');
+    this.menuButton = new Button(this, config.width * 0.75, config.height - 50, 'blueButton1', 'blueButton2', 'Menu', 'Title');
+    resetLocalScore();
   }
 }

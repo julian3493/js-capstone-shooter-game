@@ -8,10 +8,11 @@ const postScore = async (player, score) => {
   try {
     const request = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/FQyLd3szps7WIlySAb52/scores/', {
       method: 'POST',
+      mode: 'cors',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ user: player, score: score }),
+      body: JSON.stringify({ user: player, score }),
     });
     const response = await request.json();
     return response;
@@ -40,6 +41,5 @@ const getScores = async () => {
     throw new Error('Unable to find Highscores!');
   }
 };
-
 
 export { getScores, postScore };

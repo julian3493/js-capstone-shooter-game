@@ -1,16 +1,16 @@
-import 'phaser';
- 
+import Phaser from 'phaser';
+
 export default {
   type: Phaser.WEBGL,
   width: 480,
   height: 640,
-  backgroundColor: "black",
+  backgroundColor: 'black',
   physics: {
-    default: "arcade",
+    default: 'arcade',
     arcade: {
-      gravity: { x: 0, y: 0 }
-    }
+      gravity: { x: 0, y: 0 },
+    },
   },
   pixelArt: true,
-  roundPixels: true
+  roundPixels: true,
 };

@@ -8,14 +8,14 @@ export default class ScrollingBackground {
     this.layers = this.scene.add.group();
     this.createLayers();
   }
-  
+
   createLayers() {
     const flipAxis = Phaser.Math.Between(0, 10) >= 5 ? -1 : 1;
-    for (var i = 0; i < 2; i++) {
-      var layer = this.scene.add.sprite(0, 0, this.key);
+    for (let i = 0; i < 2; i += 1) {
+      const layer = this.scene.add.sprite(0, 0, this.key);
       layer.y = (layer.displayHeight * i);
-      var flipX = flipAxis;
-      var flipY = flipAxis;
+      const flipX = flipAxis;
+      const flipY = flipAxis;
       layer.setScale(flipX * 2, flipY * 2);
       layer.setDepth(-5 - (i - 1));
       this.scene.physics.world.enableBody(layer, 0);
@@ -24,10 +24,11 @@ export default class ScrollingBackground {
       this.layers.add(layer);
     }
   }
+
   update() {
     if (this.layers.getChildren()[0].y > 0) {
-      for (var i = 0; i < this.layers.getChildren().length; i++) {
-        var layer = this.layers.getChildren()[i];
+      for (let i = 0; i < this.layers.getChildren().length; i += 1) {
+        const layer = this.layers.getChildren()[i];
         layer.y = (-layer.displayHeight) + (layer.displayHeight * i);
       }
     }
